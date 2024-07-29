@@ -75,5 +75,8 @@ WHERE fuel_type NOT IN ('Petrol', 'Diesel', 'Electric', 'Hybrid');
 
 -- Reapply the check constraint
 ALTER TABLE car_details2 ADD CONSTRAINT chk_fuel_type CHECK (fuel_type IN ('Petrol', 'Diesel', 'Electric', 'Hybrid'));
+begin 
+DELETE FROM CAR_Details2 WHERE years_since_launch >=6;
 
 SELECT * FROM car_details2
+
